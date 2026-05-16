@@ -3,17 +3,26 @@
 /* === WEBFLOW EMBED OVERRIDES === */
 /* Hide internal assessment navbar (Webflow site already has navbar above) */
 .navbar{display:none!important}
-/* Push assessment content down below Webflow's sticky navbar (~80px) */
-#tb-assessment-root .hero{padding-top:64px!important}
+/* Push assessment content down well below Webflow's sticky navbar (~80-100px tall) */
+#tb-assessment-root .hero{padding-top:140px!important}
 #tb-assessment-root .flow-shell,
 #tb-assessment-root .widget-shell,
-#tb-assessment-root .dash-shell{padding-top:48px!important}
-/* Mobile: smaller spacing since mobile navbar is shorter */
+#tb-assessment-root .dash-shell{padding-top:130px!important}
+/* Also ensure scroll-into-view leaves room for the sticky Webflow navbar */
+#tb-assessment-root .q-card,
+#tb-assessment-root .flow-header,
+#tb-assessment-root .dash-header,
+#tb-assessment-root .widget-card{scroll-margin-top:120px}
+/* Mobile: smaller spacing since mobile navbar is shorter (~60px) */
 @media (max-width:768px){
-  #tb-assessment-root .hero{padding-top:32px!important}
+  #tb-assessment-root .hero{padding-top:90px!important}
   #tb-assessment-root .flow-shell,
   #tb-assessment-root .widget-shell,
-  #tb-assessment-root .dash-shell{padding-top:24px!important}
+  #tb-assessment-root .dash-shell{padding-top:80px!important}
+  #tb-assessment-root .q-card,
+  #tb-assessment-root .flow-header,
+  #tb-assessment-root .dash-header,
+  #tb-assessment-root .widget-card{scroll-margin-top:70px}
 }
 
 /* === BACK TO HOME BUTTON (Webflow embed) === */
